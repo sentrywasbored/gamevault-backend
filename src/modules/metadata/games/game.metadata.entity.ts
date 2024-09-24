@@ -93,6 +93,14 @@ export class GameMetadata extends DatabaseEntity {
   })
   title?: string;
 
+  @Column({ nullable: true })
+  @Index()
+  @ApiProperty({
+    description: "title of the game, used for sorting",
+    example: "Monkey Island 5.1; Halo 2; Jackbox 10.5",
+  })
+  sort_title?: string;
+
   @Index()
   @Column({ nullable: true })
   @ApiPropertyOptional({

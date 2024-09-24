@@ -192,6 +192,10 @@ export class GamesService {
         updatedUserMetadata.title = dto.user_metadata.title;
       }
 
+      if (dto.user_metadata.sort_title != null) {
+        updatedUserMetadata.sort_title = dto.user_metadata.sort_title;
+      }
+
       if (dto.user_metadata.release_date != null) {
         updatedUserMetadata.release_date = new Date(
           dto.user_metadata.release_date,

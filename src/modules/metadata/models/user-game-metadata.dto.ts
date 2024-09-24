@@ -39,6 +39,15 @@ export class UserGameMetadataDto {
   })
   title?: string;
 
+  @IsOptional()
+  @IsString()
+  @IsNotEmpty()
+  @ApiProperty({
+    description: "title of the game, used for sorting",
+    example: "GTA 5; Monkey Island 5.1; Halo 2; Jackbox 10.5",
+  })
+  sort_title?: string;
+
   @ApiPropertyOptional({
     description: "release date of the game as ISO8601 string",
     example: "2013-09-17T00:00:00.000Z",
