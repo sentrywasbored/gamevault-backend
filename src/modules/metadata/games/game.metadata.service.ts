@@ -138,6 +138,7 @@ export class GameMetadataService {
       provider_priority: game.provider_priority,
       age_rating: game.age_rating,
       title: game.title,
+      sort_title: game.sort_title,
       release_date: game.release_date,
       description: game.description,
       notes: game.notes,
